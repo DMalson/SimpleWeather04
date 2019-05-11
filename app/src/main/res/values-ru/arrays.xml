@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="precipitation">
+            <item>ЯСНО</item>
+            <item>ПЕРЕМЕННАЯ \nОБЛАЧНОСТЬ</item>
+            <item>ПАСМУРНО</item>
+            <item>ПЕРЕМЕННАЯ \nОБЛАЧНОСТЬ, ДОЖДЬ</item>
+            <item>ДОЖДЬ</item>
+            <item>СИЛЬНЫЙ ДОЖДЬ</item>
+            <item>ПЕРЕМЕННАЯ \nОБЛАЧНОСТЬ, СНЕГ</item>
+            <item>СНЕГ</item>
+            <item>СИЛЬНЫЙ СНЕГ</item>
+            <item>ДОЖДЬ СО СНЕГОМ</item>
+            <item>ДОЖДЬ, ГРОЗА</item>
+            <item>ТУМАН</item>
+        </string-array>
+        <array name="pictures">
+            <item>@drawable/wsymbol_0000</item>
+            <item>@drawable/wsymbol_0001</item>
+            <item>@drawable/wsymbol_0002</item>
+            <item>@drawable/wsymbol_0003</item>
+            <item>@drawable/wsymbol_0004</item>
+            <item>@drawable/wsymbol_0005</item>
+            <item>@drawable/wsymbol_0006</item>
+            <item>@drawable/wsymbol_0007</item>
+            <item>@drawable/wsymbol_0008</item>
+            <item>@drawable/wsymbol_0009</item>
+            <item>@drawable/wsymbol_0010</item>
+            <item>@drawable/wsymbol_0011</item>
+        </array>
+        <string-array name="windDirection">
+            <item>восточный</item>
+            <item>северо-восточный</item>
+            <item>северный</item>
+            <item>северо-западный</item>
+            <item>западный</item>
+            <item>юго-западный</item>
+            <item>южный</item>
+            <item>юго-восточный</item>
+        </string-array>
+</resources>

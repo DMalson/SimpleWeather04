@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Просто погода</string>
+    <string name="action_settings">Настройки</string>
+    <string name="hint_name">Введите  или выберите местоположение</string>
+    <string name="add_place">Добавить</string>
+    <string name="cb_pressure">Давление</string>
+    <string name="cb_humidity">Влажность</string>
+    <string name="cb_wind">Ветер</string>
+    <string name="cb_precipitation">Осадки</string>
+    <string name="txt_pressure">Давление %s мм рт.ст.</string>
+    <string name="txt_humidity">Влажность %s </string>
+    <string name="txt_wind">Ветер %s, %s м/с</string>
+    <string name="btn_OK">ОК</string>
+    <string name="txt_ChooseParameters">Выберите параметры для отображения</string>
+    <string name="txt_wind_0">east</string>
+    <string name="txt_wind45">north-east</string>
+    <string name="txt_wind90">north</string>
+    <string name="txt_wind135">north-west</string>
+    <string name="txt_wind180">west</string>
+    <string name="txt_wind225">south-west</string>
+    <string name="txt_wind270">south</string>
+    <string name="txt_wind315">south-east</string>
+    <string name="txt_test">ТЕСТОВАЯ СТРОКА</string>
+</resources>

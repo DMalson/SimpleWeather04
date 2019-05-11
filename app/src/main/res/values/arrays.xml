@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="precipitation">
+        <item>SUNNY</item>
+        <item>PARTLY CLOUDY</item>
+        <item>CLOUDY</item>
+        <item>PARTLY CLOUDY, RAIN</item>
+        <item>RAIN</item>
+        <item>HEAVY RAIN</item>
+        <item>PARTLY CLOUDY, SNOW</item>
+        <item>SNOW</item>
+        <item>HEAVY SNOW</item>
+        <item>RAIN AND SNOW</item>
+        <item>RAIN, THUNDERSTORM</item>
+        <item>MIST</item>
+    </string-array>
+    <array name="pictures">
+        <item>@drawable/wsymbol_0000</item>
+        <item>@drawable/wsymbol_0001</item>
+        <item>@drawable/wsymbol_0002</item>
+        <item>@drawable/wsymbol_0003</item>
+        <item>@drawable/wsymbol_0004</item>
+        <item>@drawable/wsymbol_0005</item>
+        <item>@drawable/wsymbol_0006</item>
+        <item>@drawable/wsymbol_0007</item>
+        <item>@drawable/wsymbol_0008</item>
+        <item>@drawable/wsymbol_0009</item>
+        <item>@drawable/wsymbol_0010</item>
+        <item>@drawable/wsymbol_0011</item>
+    </array>
+    <string-array name="windDirection">
+        <item>east</item>
+        <item>north-east</item>
+        <item>north</item>
+        <item>north-west</item>
+        <item>west</item>
+        <item>south-west</item>
+        <item>south</item>
+        <item>south-east</item>
+    </string-array>
+
+</resources>
