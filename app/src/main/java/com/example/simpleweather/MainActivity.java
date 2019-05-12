@@ -24,16 +24,16 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Инициализация RecyclerView, установка LayoutManager
         RecyclerView recyclerView = findViewById(R.id.places_list);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
-
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-
+        //Установка адаптера
         final FirstRecycleAdapter adapter = new FirstRecycleAdapter();
         recyclerView.setAdapter(adapter);
-
+        //Реакция на нажатие на элемент списка в RecyclerView
         adapter.setOnItemClickListener(new FirstRecycleAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //Добавление нового элемента в список
         Button add = findViewById(R.id.add_new_place);
         final TextView new_place = findViewById(R.id.new_place);
         add.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        WeatherInformer weatherInformer = WeatherInformer.getInstance();
+        weatherInformer.getPreferences(getApplicationContext());
     }
 
     @Override
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
             weatherInformer.setShowPressure(data.getBooleanExtra("Pressure", false));
             weatherInformer.setShowWind(data.getBooleanExtra("Wind", false));
             weatherInformer.setShowPrecipitation(data.getBooleanExtra("Precipitation", false));
+            weatherInformer.setPreferences(getApplicationContext());
         }
     }
 }

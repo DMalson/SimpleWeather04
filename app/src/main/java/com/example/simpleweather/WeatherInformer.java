@@ -1,5 +1,8 @@
 package com.example.simpleweather;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TreeMap;
@@ -14,12 +17,15 @@ public class WeatherInformer {
     private static boolean showHumidity = true;
     private static boolean showWind = true;
     private static boolean showPrecipitation = true;
+
     private WeatherInformer() {
         initWeatherInfo();
     }
 
     public static WeatherInformer getInstance() {
-        if (wiInstance == null) { wiInstance = new WeatherInformer(); }
+        if (wiInstance == null) {
+            wiInstance = new WeatherInformer();
+        }
         return wiInstance;
     }
 
@@ -64,13 +70,17 @@ public class WeatherInformer {
         return showPressure;
     }
 
-    public void setShowPressure(boolean showPressure) { WeatherInformer.showPressure = showPressure; }
+    public void setShowPressure(boolean showPressure) {
+        WeatherInformer.showPressure = showPressure;
+    }
 
     public boolean isShowHumidity() {
         return showHumidity;
     }
 
-    public void setShowHumidity(boolean showHumidity) { WeatherInformer.showHumidity = showHumidity; }
+    public void setShowHumidity(boolean showHumidity) {
+        WeatherInformer.showHumidity = showHumidity;
+    }
 
     public boolean isShowWind() {
         return showWind;
@@ -89,10 +99,28 @@ public class WeatherInformer {
     }
 
     public PlaceWeather getPlaceWeather(String place) {
-        if (weatherMap.containsKey(place)){
+        if (weatherMap.containsKey(place)) {
             return weatherMap.get(place);
         } else {
             return weatherMap.get("MOSCOW");
         }
     }
+
+    public void getPreferences(Context applicationContext) {
+        SharedPreferences sharedPreferences = applicationContext.getSharedPreferences("settings", Context.MODE_PRIVATE);
+        showHumidity = sharedPreferences.getBoolean("Humidity", true);
+        showPrecipitation = sharedPreferences.getBoolean("Precipitation", true);
+        showPressure = sharedPreferences.getBoolean("Pressure", true);
+        showWind = sharedPreferences.getBoolean("Wind", true);
+    }
+    public void setPreferences(Context applicationContext) {
+        SharedPreferences sharedPreferences = applicationContext.getSharedPreferences("settings", Context.MODE_PRIVATE);
+        SharedPreferences.Editor e = sharedPreferences.edit();
+        e.putBoolean("Humidity", showHumidity);
+        e.putBoolean("Precipitation", showPrecipitation);
+        e.putBoolean("Pressure", showPressure);
+        e.putBoolean("Wind", showWind);
+        e.apply();
+    }
 }
+
